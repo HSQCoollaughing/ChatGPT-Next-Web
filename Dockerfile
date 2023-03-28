@@ -31,7 +31,7 @@ RUN yarn build
 FROM base AS runner
 WORKDIR /app
 
-ENV OPENAI_API_KEY="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"
+ENV OPENAI_API_KEY="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"
 ENV CODE=""
 
 COPY --from=builder /app/public ./public
