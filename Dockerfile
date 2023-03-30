@@ -18,7 +18,7 @@ FROM base AS builder
 
 RUN apk update && apk add --no-cache git
 
-ENV OPENAI_API_KEY=""
+ENV OPENAI_API_KEY="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"
 ENV CODE=""
 ARG DOCKER=true
 
@@ -31,7 +31,7 @@ RUN yarn build
 FROM base AS runner
 WORKDIR /app
 
-ENV OPENAI_API_KEY="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"
+ENV OPENAI_API_KEY="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"
 ENV CODE=""
 
 COPY --from=builder /app/public ./public
